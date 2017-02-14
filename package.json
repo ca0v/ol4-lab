@@ -1,0 +1,22 @@
+{
+  "name": "ol4-lab",
+  "version": "4.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ca0v/ol4-lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ca0v/ol4-lab/issues"
+  },
+  "homepage": "https://github.com/ca0v/ol4-lab#readme",
+  "dependencies": {
+    "ol": "^4.0.1-beta.1"
+  }
+}

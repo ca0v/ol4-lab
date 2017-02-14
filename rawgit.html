@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>OpenLayers 4 - Lab</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.0.1/ol.css');
+        .map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
+</head>
+
+<body>
+    <div class="map"></div>
+    <script>
+        (() => {
+            window.module = window.module || {};
+
+            function getParameterByName(name, url = window.location.href) {
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+
+            let debug = getParameterByName("debug") === "1";
+
+            require.config({
+
+                packages: [
+                    {
+                        name: 'jquery',
+                        location: 'https://code.jquery.com',
+                        main: debug ? 'jquery-3.1.0' : 'jquery-3.1.0.min'
+                    }
+                ],
+
+                deps: [
+                    "built/index"
+                ],
+
+                callback: () => {
+                    window.module = window.module || {};
+                    require([getParameterByName("run") || "ol4-lab/examples/index"], test => test.run());
+                }
+            });
+
+        })();
+    </script>
+</body>
+
+</html>
