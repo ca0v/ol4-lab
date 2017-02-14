@@ -1,0 +1,24 @@
+{
+  "name": "ol4-lab",
+  "homepage": "https://github.com/ca0v/ol4-lab",
+  "description": "",
+  "main": "",
+  "keywords": [
+    "openlayers"
+  ],
+  "authors": [
+    "corey alix"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "openlayers": "https://github.com/openlayers/openlayers/releases/download/v4.0.1/v4.0.1-dist.zip"
+  }
+}

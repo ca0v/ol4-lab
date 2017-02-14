@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "module": "amd",
+        "target": "es5",
+        "declaration": false,
+        "noImplicitAny": false,
+        "outFile": "built/index.js",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "baseUrl": "./node_modules"
+    },
+    "exclude": [
+        "node_modules",
+        "bower_components",
+        "built"
+    ]
+}
