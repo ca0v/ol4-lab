@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "uglifyjs ./built/index.js -c -m --in-source-map ./built/index.js.map --source-map ./built/index-min.js.map > ./built/index-min.js",
+    "build": "tsc --outFile ./built/index.js"
   },
   "repository": {
     "type": "git",

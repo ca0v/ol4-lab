@@ -33678,7 +33678,8 @@ define("ol4-lab/examples/index", ["require", "exports", "node_modules/ol/map", "
     var epsg4326 = new projection_4.default({ code: 'EPSG:4326' });
     var epsg3857 = new projection_4.default({ code: 'EPSG:3857' });
     function run() {
-        var center = proj_12.default.transform([-0.92, 52.96], epsg4326, epsg3857);
+        var p = proj_12.default;
+        var center = p.transform([-0.92, 52.96], epsg4326, epsg3857);
         var mapContainer = document.getElementsByClassName("map")[0];
         var vectorLayer = new vector_3.default({
             source: new vector_4.default(),

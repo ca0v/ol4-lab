@@ -16,7 +16,8 @@ const epsg4326 = new Projection({ code: 'EPSG:4326' });
 const epsg3857 = new Projection({ code: 'EPSG:3857' });
 
 export function run() {
-    let center = Proj.transform([-0.92, 52.96], epsg4326, epsg3857);
+    let p = <typeof ol.proj>Proj;
+    let center = p.transform([-0.92, 52.96], epsg4326, epsg3857);
 
     let mapContainer = document.getElementsByClassName("map")[0];
 
