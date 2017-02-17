@@ -1,8 +1,7 @@
 # OpenLayers 4 Lab
-* [ol4-lab](https://github.com/ca0v/ol4-lab).
+* [ol4-lab](https://github.com/ca0v/ol4-lab)
 
-This is a very early attempt and creating a custom build.  It requires manually moving nested node_modules
-to flatten them out as siblings to "ol".
+Attempts to create a custom build.
 
 It required manually modifying rbush and quickselect.
 
@@ -17,8 +16,11 @@ for quickselect:
 export default partialSort;
 ```
 
-The resulting output file `./built/index.js` is 29k lines of code.
-Compare that to the 91k in ol-debug.js.
+Size Comparisions:
+* Uncompressed output file [index.js](https://raw.githubusercontent.com/ca0v/ol4-lab/master/built/index.js) 
+to [ol-debug.js](https://cdnjs.cloudflare.com/ajax/libs/ol3/4.0.1/ol-debug.js)
+* Uglified output file [index-min.js](https://raw.githubusercontent.com/ca0v/ol4-lab/master/built/index-min.js) 
+to more agressive closure [ol.js](https://cdnjs.cloudflare.com/ajax/libs/ol3/4.0.1/ol.js)
 
 ## Examples
 
@@ -29,8 +31,3 @@ Compare that to the 91k in ol-debug.js.
 
 * npm install
 * tsc -w
-
-## Consume
-
-* `typings install ol4-lab=github:ca0v/ol4-lab/built/index.d.ts#v4.0.1 --global --save`
-* `bower install ol4-lab=git://github.com/ca0v/ol4-lab.git#v4.0.1 --save`
